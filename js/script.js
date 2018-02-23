@@ -3,6 +3,8 @@
 /*document.getElementById('loadQuote').addEventListener("click", printQuote, false);  */
 
 
+/*  Here is the array with  5 objects and each object has two value/pairs one for quotes and one for source */
+
 
 let quotes = [
 	{
@@ -34,12 +36,23 @@ let quotes = [
 
 ];
 
-/*let random = Math.floor(Math.random()*quotes.length); */
+/*  This is a function to get a random quote---I have usd the random()  function to get a number from 0-1 multiplied it by the length of the quotes array
+and the used the math.floor to round the number to an integer */
+
+
+
+ function getRandomQuote (){
+	 var random =Math.floor(Math.random()*quotes.length);
+	 return random; 
+
+	}
+
+/*  the printQuote function  takes the results from the GetRandomQuote Function and builds some HTMl from it and selects the place on the HTML page to insert the created HTML */
 
 
 function printQuote(){
-	let random = Math.floor(Math.random()*quotes.length);
 
+	let random = getRandomQuote();
 	var phrase = quotes[random].quote;
 	var author = quotes[random].source;
 	var place = document.getElementsByClassName('quote')[0];
@@ -47,6 +60,8 @@ function printQuote(){
 	place.innerHTML = phrase;
 	person.innerHTML= author;
 }
+
+/*  THis is the part where I select the part of the page and set an event handler to the section */
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false); 
