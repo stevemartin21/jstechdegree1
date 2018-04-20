@@ -12,37 +12,37 @@ body {
   width: 80%;
   line-height: .5;
 }
-.quote {
+.skill {
   font-size: 4rem;
   font-weight: 400;
   line-height: 1.1;
   position: relative;
   margin: 0;
   } 
-.quote:before, .quote:after {
+.skill:before, .skill:after {
   font-size: 6rem;
   line-height: 2.5rem;
   position: absolute;
 }
-.quote:before {
+.skill:before {
   content: "“";
   top: .25em;
   left: -.5em;
 }
-.quote:after {
+.skill:after {
   content: "”";
   bottom: -.1em;
   margin-left: .1em;
   position: absolute;
 }
-.source {
+.category {
   font-size: 1.25rem;;
   letter-spacing: 0.05em;
   line-height: 1.1;
   text-align: right;
   margin-right: 4em;
 }
-.source:before {
+.catagory:before {
   content: "—";
 }
 .citation {
@@ -57,7 +57,7 @@ body {
   font-style: normal;
 }
 
-#loadQuote {
+#loadSkill {
   position: fixed;
   width: 12em;
   display: inline-block;
@@ -71,21 +71,85 @@ body {
   padding: 15px 0;
   transition: .5s ;
 }
-#loadQuote:hover {
+#loadSkill:hover {
   background-color: rgba(255,255,255,.25);
 }
-#loadQuote:focus {
+#loadSkill:focus {
   outline: none;
 }
 
+#loadEducation {
+  position: fixed;
+  width: 12em;
+  display: inline-block;
+  left: 25%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #36b55c;
+  padding: 15px 0;
+  transition: .5s ;
+}
+#loadEducation:hover {
+  background-color: rgba(255,255,255,.25);
+}
+#loadEducation:focus {
+  outline: none;
+}
+
+#loadExperience {
+  position: fixed;
+  width: 12em;
+  display: inline-block;
+  right: 25%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #36b55c;
+  padding: 15px 0;
+  transition: .5s ;
+}
+#loadExperience:hover {
+  background-color: rgba(255,255,255,.25);
+}
+#loadExperience:focus {
+  outline: none;
+}
+
+#loadAchievements{
+  position: fixed;
+  width: 12em;
+  display: inline-block;
+  left: 10%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #36b55c;
+  padding: 15px 0;
+  transition: .5s ;
+}
+#loadAchievements:hover {
+  background-color: rgba(255,255,255,.25);
+}
+#loadAchievements:focus {
+  outline: none;
+}
+
+
 @media (max-width: 420px) {
-  .quote {
+  .skill {
     font-size: 2.5rem;
   }
-  .quote:before, .quote:after {
+  .skill:before, .skill:after {
     font-size: 3rem;
   }
-  .source {
+  .category {
     font-size: 1rem;
   }
 }
